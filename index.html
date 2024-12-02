@@ -4,23 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamba</title>
+    <title>Cinkacka</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    <script src="app.js"></script>
 </head>
 <body>
-    <div id="cinkacka">
-        <h1>Cinkačka</h1>
-        <div id="kotouce">
-            <div id="first">👺</div>
-            <div id="second">🍆</div>
-            <div id="third">🏳️‍🌈</div>
-        </div>
-        <hr />
+    <div id="kredit" class="page_visible">
         <form>
-            <button type="button" onclick="Roztoc()">Roztoč</button>
+            <label for="kredit">Vstupní kredit</label>
+            <input type="number" name="kredit" id="input_kredit" value="1000">
+            <button type="button" onclick="PridejKredit()">Přidej kredit</button>
         </form>
     </div>
+    <div id="strana" class="page">
+        <div id="strana1" class="page_visible">
+            <h1>Cinkacka</h1>
+            <div id="kotouce">
+                <div id="first">⭐</div>
+                <div id="second">⭐</div>
+                <div id="third">⭐</div>
+            </div>
+            <hr />
+            <form>
+                <button type="button" onclick="Roztoc()">Roztoč</button>
+                Autospin
+                <label class="switch">
+                    <input id="autospin" type="checkbox" onchange="handleAutospinChange()">
+                    <span class="slider round"></span>
+                </label>
+            </form>
+            <form>
+                <label for="sazka">Sázka</label>
+                <input type="number" name="sazka" id="sazka" value="1">
+            </form>
+            <div id="vyhra">Vyhra: Vyhral</div>
+            <div id="current_kredit">Kredit: 0</div>
+        </div>
+        <div id="strana2" class="page">
+            <form>
+                <label for="znaky">Znaky v automatu</label>
+                <input type="text" name="znaky" id="znaky" value="⭐, 🍀, 🌈, 🍄, 🍎">
+            </form>
+        </div>
+        <button type="button" onclick="ZmenStranku1()">Tocka</button>
+        <button type="button" onclick="ZmenStranku2()">Nastaveni</button>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>

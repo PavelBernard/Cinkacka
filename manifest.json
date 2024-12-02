@@ -1,7 +1,7 @@
 {
-    "name": "Open Weather Map - Temperature",
-    "short_name": "Weather",
-    "description": "Jednoduchy PWA - Open Weather Map Temperature",
+    "name": "Cinkacka",
+    "short_name": "Cinkacka",
+    "description": "Fun app for student",
     "start_url": "/index.html",
     "display": "standalone",
     "icons": [
